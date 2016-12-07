@@ -1,0 +1,68 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li> <a href="{:url('Cdr/index')}">CDR列表</a>  </li>
+      <li class="active">CDR 通话明细</li>
+      </ul>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>主叫名/主叫号码</th>
+          <th>被叫号码</th>
+          <th>开始/应答/结束时间</th>
+          <th>接通/通话时长</th>
+          <th>呼入/呼出编码</th>
+          <th>主叫IP/媒体IP</th>
+          <th>接通延迟PDD</th>
+          <th>Direction</th>
+          <th>状态/挂断原因</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>
+            <td>{$fs_xml_cdr['caller_id_name']}<br/>{$fs_xml_cdr['caller_id_number']}</td>
+            <td>{$fs_xml_cdr['destination_number']}</td>
+            <td>{$fs_xml_cdr['start_stamp']}<br/>{$fs_xml_cdr['answer_stamp']}<br/>{$fs_xml_cdr['end_stamp']}</td>
+            <td>{$fs_xml_cdr['duration']}<br/>{$fs_xml_cdr['billsec']}</td>
+            <td>{$fs_xml_cdr['read_codec']}/{$fs_xml_cdr['read_rate']}<br/>{$fs_xml_cdr['write_codec']}/{$fs_xml_cdr['write_rate']}</td>
+            <td>{$fs_xml_cdr['network_addr']}<br/>{$fs_xml_cdr['remote_media_ip']}</td>
+            <td>{$fs_xml_cdr['pdd_ms']/1000}s</td>
+            <td>{$fs_xml_cdr['direction']}</td>
+            <td>{$fs_xml_cdr['hangup_cause']}({$fs_xml_cdr['hangup_cause_q850']})<br/>{$fs_xml_cdr['sip_hangup_disposition']}</td>
+          </tr>
+      </tbody>
+    </table>
+    <br/>
+    {foreach name="list" item="val"}
+    <table class="table table-bordered table-hover">
+      <thead>
+      	<tr>
+        	<th colspan="2">{$key}</th>
+        </tr>
+        <tr>
+          <th>名称</th>
+          <th>数据</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="val" key="k" item="v"}
+          <tr>
+            <td>{$k}</td>
+            <td>
+            	{if condition="is_array($v)"}
+                	 <?php dump($v)?>
+                {else /}
+                {$v|urldecode}
+                {/if}</td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+    <hr />
+    {/foreach}
+    
+  </div>
+</div>

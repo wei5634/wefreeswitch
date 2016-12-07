@@ -1,0 +1,43 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">用户目录</li>
+      </ul>
+    <div>
+    <a href="{:url('index')}">全部</a>  context {volist name="context_list" id="vc"}<a href="{:url('index',array('command'=>'context '.$vc.''))}">{$vc}</a> {/volist}  group {volist name="group_list" id="vg"}<a href="{:url('index',array('command'=>'group '.$vg.''))}">{$vg}</a> {/volist} domain {volist name="domain_list" id="vd"}<a href="{:url('index',array('command'=>'domain '.$vd.''))}">{$vd}</a> {/volist}<br/>
+    </div>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>电话号码</th>
+          <th>context</th>
+          <th>domain</th>
+          <th>组group</th>
+          <th>contact</th>
+          <th>呼叫组callgroup</th>
+          <th>外呼显示名effective_caller_id_name</th>
+          <th>外呼显示号码effective_caller_id_number</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['userid']}</td>
+            <td>{$val['context']}</td>
+            <td>{$val['domain']}</td>
+            <td>{$val['group']}</td>
+            <td>{if condition="$val['contact'] neq 'error/user_not_registered'"}{$val['contact']}{/if}</td>
+            <td>{$val['callgroup']}</td>
+            <td>{$val['effective_caller_id_name']}</td>
+            <td>{$val['effective_caller_id_number']}</td>
+            <td></td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+  </div>
+</div>

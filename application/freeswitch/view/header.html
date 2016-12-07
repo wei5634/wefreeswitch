@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{:config('system.webname')}</title>
+
+    <!-- Bootstrap -->
+    <link href="__ROOT__/public/static/bootstrap3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="__ROOT__/public/static/freeswitch/css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="__ROOT__/public/static/bootstrap3.3.7/js/html5shiv.min.js"></script>
+    <script src="__ROOT__/public/static/bootstrap3.3.7/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="__ROOT__/public/static/jquery/jquery.min.js"></script>
+    <link href="__ROOT__/public/static/freeswitch/js/common.js" rel="stylesheet">
+</head>
+<body>
+<br/>
+<div class="container">
+    <a href="{:url('index/index')}" class="btn btn-primary">首页</a>
+    <a href="{:url('nowcall/index')}" class="btn btn-primary">当前通话</a>
+    <a href="{:url('users/index')}" class="btn btn-primary">用户目录</a>
+    <a href="{:url('registers/index')}" class="btn btn-primary">注册用户</a>
+    <a href="{:url('cdr/index')}" class="btn btn-primary">CDR历史话单</a>
+    <a href="{:url('sofia/index')}" class="btn btn-primary">Sofia SIP状态</a>
+    <a href="{:url('show/index?type=modules')}" class="btn btn-primary">模块</a>
+    <a href="{:url('show/index')}" class="btn btn-primary">系统状态</a>
+    <a href="{:url('command/index')}" class="btn btn-primary">命令行</a>
+    <a href="{:url('config/index')}" class="btn btn-primary">配置</a>
+</div>
+<br/>

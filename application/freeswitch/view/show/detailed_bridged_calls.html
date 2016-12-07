@@ -1,0 +1,31 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">详细桥接通话detailed_bridged_calls</li>
+      </ul>
+    {include file="show/menu" /}
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>主叫</th>
+          <th>被叫</th>
+          <th>context</th>
+          <th>ip</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['cid_num']}</td>
+            <td>{$val['callee_num']}</td>
+            <td>{$val['context']}</td>
+            <td>{$val['ip_addr']}</td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+  </div>
+</div>

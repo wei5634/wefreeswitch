@@ -1,0 +1,45 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>      
+      <li class="active">当前通话</li>
+      </ul>
+    当前总通话数：{$list|count} <a class="btn btn-info" href="javascript:window.location.reload()">刷新</a>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Profile</th>
+          <th>创建时间/持续时长</th>
+          <th>主叫号码/显示名称/显示号码</th>
+          <th>被叫号码</th>
+          <th>当前应用</th>
+          <th>主叫编码</th>
+          <th>被叫编码</th>
+          <th>加密</th>
+          <th>主叫信息</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['wei_sip_profile']}</td>
+            <td>{$val['created']}<br/>{$val['wei_calltime']}</td>
+            <td>{$val['wei_number']}<br/>{$val['cid_name']}<br/>{$val['cid_num']}</td>
+            <td>{$val['dest']}</td>
+            <td>{if condition="!empty($val['application'])"}{$val['application']}{/if}{if condition="!empty($val['application_data'])"}<br/>{$val['application_data']}{/if}</td>
+            <td>{$val['read_codec']}<br/>{$val['read_rate']}<br/>{$val['read_bit_rate']}</td>
+            <td>{$val['write_codec']}<br/>{$val['write_rate']}<br/>{$val['write_bit_rate']}</td>
+            <td>{if condition="!empty($val['secure'])"}{$val['secure']}{/if}</td>
+            <td>{$val['ip_addr']}</td>
+            <td><a href="{:url('cmd',array('command'=>'uuid_kill '.$val['uuid']))}">挂断</a></td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+    <div class="pagination pagination-centered"></div>
+    <a class="btn btn-danger" href="{:url('batchkill')}">挂断全部通话</a>
+  </div>
+</div>

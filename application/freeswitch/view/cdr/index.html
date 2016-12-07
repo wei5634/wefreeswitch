@@ -1,0 +1,58 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">CDR历史话单</li>
+      </ul>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+        	<td>
+            	<form action="{:url('index')}" method="post">
+                  主叫号码<input name="caller" type="text" />
+                  被叫号码<input name="called" type="text" />
+                  开始时间 开始<input name="start_time" type="text" />
+                  结束<input name="end_time" type="text" />
+                  <input name="提交" type="submit" class="btn" value="搜索" />
+                </form>
+            </td>
+        </tr>
+      </thead>
+    </table>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>主叫名/主叫号码</th>
+          <th>被叫号码</th>
+          <th>开始/应答/结束时间</th>
+          <th>接通/通话时长</th>
+          <th>呼入/呼出编码</th>
+          <th>主叫IP/媒体IP</th>
+          <th>接通延迟PDD</th>
+          <th>Direction</th>
+          <th>状态/挂断原因</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['caller_id_name']}<br/>{$val['caller_id_number']}</td>
+            <td>{$val['destination_number']}</td>
+            <td>{$val['start_stamp']}<br/>{$val['answer_stamp']}<br/>{$val['end_stamp']}</td>
+            <td>{$val['duration']}<br/>{$val['billsec']}</td>
+            <td>{$val['read_codec']}/{$val['read_rate']}<br/>{$val['write_codec']}/{$val['write_rate']}</td>
+            <td>{$val['network_addr']}<br/>{$val['remote_media_ip']}</td>
+            <td>{$val['pdd_ms']/1000}s</td>
+            <td>{$val['direction']}</td>
+            <td>{$val['hangup_cause']}({$val['hangup_cause_q850']})<br/>{if condition="$sip_hangup_disposition[$val['sip_hangup_disposition']] neq ''"}{$sip_hangup_disposition[$val['sip_hangup_disposition']]}{else /}{$val['sip_hangup_disposition']}{/if}</td>
+            <td><a href="{:url('view',array('uuid'=>$val[uuid]))}">详细</a></td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+    <div class="pagination pagination-centered">{$page}</div>
+  </div>
+</div>

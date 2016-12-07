@@ -1,0 +1,43 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">注册用户</li>
+      </ul>
+    <div>注册数：{if condition="is_array($list)"}{$list|count}{/if} <a class="btn btn-danger" href="javascript:window.location.reload()">刷新</a></div>
+    <table class="table table-bordered table-hover">
+      <thead>
+      	{if condition="$profile neq ''"}
+        <tr>
+        	<th colspan="7">{$profile}</th>
+        </tr>
+        {/if}
+        <tr>
+          <th>电话号码</th>
+          <th>服务器</th>
+          <th>设备名称</th>
+          <th>注册地址</th>
+          <th>端口</th>
+          <th>状态</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['sip-auth-user']}</td>
+            <td>{$val['host']}</td>
+            <td>{$val['agent']}</td>
+            <td>{$val['network-ip']}</td>
+            <td>{$val['network-port']}</td>
+            <td>{$val['status']}</td>
+            <td><a href="{:url('flushReg',array('call_id'=>$val['user'],'profile'=>$profile))}">踢掉</a></td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+    <div class="pagination pagination-centered"></div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">状态status</li>
+      </ul>
+    {include file="show/menu" /}
+    <table class="table-bordered">
+      <tbody>
+          <tr>
+            <td><pre>{$list['all']}</pre></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

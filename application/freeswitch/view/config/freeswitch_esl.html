@@ -1,0 +1,87 @@
+<div class="container">
+<div class="row">
+  {include file="config/menu"/}
+  <div>
+    <FORM  role="form" method="post" name="orderform">
+      <table class="table table-bordered table-condensed">
+        <TR >
+          <TD colspan="6" align="left"  bgcolor="#E7E7E7" height="24">&nbsp;&nbsp;<strong>{$type}</strong></TD>
+        </TR>
+        <TR>
+          <th width="150">名称(必填)</th>
+          <th>ESL地址</th>
+          <th>ESL端口</th>
+          <th>ESL密码</th>
+          <th>排序</th>
+          <th align="left">操作</th>
+        </TR>
+        <tbody id="tbody_act">
+        {foreach name="list" item="val"}
+          <TR class="repeat">
+            <td width="150" align="center">
+              <input name="data[act][]" type="hidden" id="data[act][]" value="update" />
+              <input name="data[server_name][]" type="text" value="{$val['server_name']}" class="input-small"/>
+            </td>
+            <td align="center"><input name="data[esl_host][]" type="text" value="{$val['esl_host']}" /></td>
+            <td align="center"><input name="data[esl_port][]" type="text" value="{$val['esl_port']}" size="10" class="input-small"/></td>
+            <td width="150" align="center"><input name="data[esl_password][]" type="text" value="{$val['esl_password']}" /></td>
+            <td align="center"><input name="data[sid][]" type="text" value="{$val['sid']}" size="3" class="input-small"/></td>
+            <td align="left"><a class="del" href="#">删除</a></td>
+          </TR>
+        {/foreach}
+        </tbody>
+        <TR >
+          <td colspan="6" align="left">&nbsp;</td>
+        </TR>
+        <TR >
+          <td colspan="6" align="left" bgcolor="#efefef">&nbsp;&nbsp;
+            <input id="btnAdd" class="btn3_mouseout" type="button" value="添  加" /></td>
+        </TR>
+        <tbody id="tbody_act_add">
+        <TR class="repeat template">
+          <td width="150" ><input name="data[act][]" type="hidden" id="data[act][]" value="insert" />
+            <input name="data[server_name][]" type="text" value="" class="input-small"/></td>
+          <td align="center"><input name="data[esl_host][]" type="text" value=""/></td>
+          <td align="center"><input name="data[esl_port][]" type="text" value="" size="10" class="input-small"/></td>
+          <td align="center"><input name="data[esl_password][]" type="text" value="" /></td>
+          <td align="center"><input name="data[sid][]" type="text" value="" size="3" /></td>
+          <td align="left"><a class="del" href="#">删除</a></td>
+        </TR>
+        </tbody>
+        <TR >
+          <TD colspan="6" align="center"><label>
+            <button type="submit" class="btn btn-danger">提 交</button>
+          </label></TD>
+        </TR>
+      </table>
+    </FORM>
+  </div>
+</div>
+  <script language="javascript">
+      $(document).ready(function() {
+          $("#btnAdd").click(function() {
+              $("#tbody_act_add>.template")
+              //连同事件一起复制
+                  .clone(true)
+                  //去除模板标记
+                  .removeClass("template")
+                  //修改内部元素
+                  //.find(".content")
+                  //.text("所要添加的信息")
+                  //.end()
+                  // .find(".del")
+                  //.text("删除")
+                  //.end()
+                  //插入表格
+                  .appendTo($("#tbody_act_add"))
+          });
+
+
+          $("#tbody_act .del").click(function() {
+              $(this).parents(".repeat").remove();
+          });
+          $("#tbody_act_add .del").click(function() {
+              $(this).parents(".repeat").remove();
+          });
+      });
+  </script>

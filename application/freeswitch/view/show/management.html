@@ -1,0 +1,29 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">management</li>
+      </ul>
+    {include file="show/menu" /}
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>名称</th>
+          <th>ikey</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['type']}</td>
+            <td>{$val['name']}</td>
+            <td>{$val['ikey']}</td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+  </div>
+</div>

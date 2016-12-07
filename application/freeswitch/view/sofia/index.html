@@ -1,0 +1,72 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">SIP状态</li>
+      </ul>
+    <div>
+        <a class="btn btn-danger" href="{:url('cmd?command=reloadxml')}">重新加载配置</a>
+        <a class="btn btn-danger" href="{:url('cmd?command=reloadacl')}">重新加载ACL</a>
+        <a class="btn btn-danger" href="{:url('cmd?command=shutdown')}">关闭freeswitch</a>
+        
+    </div>
+    <br/>
+    {foreach name="list" item="val" key="key"}
+    <table class="table table-bordered table-hover">
+      <thead>
+      	<tr>
+        	<th colspan="10">{$key}</th>
+        </tr>
+        <tr>
+          <th>名称</th>
+          <th>类型</th>
+          <th>数据</th>
+          <th>状态</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="val" key="k" item="v" }
+          <tr>
+            <td>{$v['name']}{eq name="key" value="gateway"} [{$gateway_profile[$v['name']]}]{/eq}</td>
+            <td>{$v['type']}</td>
+            <td>{$v['data']}</td>
+            <td>{$v['state']}</td>
+            <td>
+             {eq name="key" value="profile"}
+             <a href="{:url('profilestatus',array('name'=>$v['name'],'type'=>$v['type']))}">状态</a>
+             <a href="{:url('registers/index',array('profile'=>$v['name']))}">话机注册</a>
+             <a href="{:url('cmd',array('command'=>'sofia '.$v['type'].' '.$v['name'].' start'))}">开始</a>
+             <a href="{:url('cmd',array('command'=>'sofia '.$v['type'].' '.$v['name'].' stop'))}">停止</a>
+             <a href="{:url('cmd',array('command'=>'sofia '.$v['type'].' '.$v['name'].' restart'))}">重启</a>
+             <a href="{:url('cmd',array('command'=>'sofia '.$v['type'].' '.$v['name'].' rescan'))}">扫描</a>
+			 <a href="{:url('cmd',array('command'=>'sofia '.$v['type'].' '.$v['name'].' gwlist up'))}">在线网关</a>
+			 <a href="{:url('cmd',array('command'=>'sofia '.$v['type'].' '.$v['name'].' gwlist down'))}">不在线网关</a>
+             {/eq}
+             {eq name="key" value="gateway"}
+             <a href="{:url('cmd',array('command'=>'sofia '.$v['type'].' '.$v['name'].' killgw '.$v['name']))}">删除网关</a>
+             {/eq}
+            </td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+    <hr />
+    {/foreach}
+    <table class="table table-bordered table-hover">
+    	<thead>
+            <tr>
+                <th>系统状态 status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><pre>{$status}</pre></td>
+            </tr>
+        </tbody>
+    </table>
+    
+  </div>
+</div>

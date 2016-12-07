@@ -1,0 +1,32 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li> <a href="{:url('index')}">SIP状态</a>  </li>
+      <li class="active">{$Think.get.name}状态</li>
+      </ul>
+             <a class="btn btn-danger" href="{:url('registers/index',array('profile'=>$name))}">话机注册</a>
+             <a class="btn btn-danger" href="{:url('cmd',array('command'=>'sofia profile '.$name.' start'))}">开始</a>
+             <a class="btn btn-danger" href="{:url('cmd',array('command'=>'sofia profile '.$name.' stop'))}">停止</a>
+             <a class="btn btn-danger" href="{:url('cmd',array('command'=>'sofia profile '.$name.' restart'))}">重启</a>
+             <a class="btn btn-danger" href="{:url('cmd',array('command'=>'sofia profile '.$name.' rescan'))}">扫描</a>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>项</th>
+          <th>值</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$key}</td>
+            <td>{if condition="is_array($val)"}<?php echo implode(',',$val);?>{else /}{$val}{/if}</td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+  </div>
+</div>

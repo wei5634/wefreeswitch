@@ -1,0 +1,41 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">命令行</li>
+      </ul>
+    <form action="{:url('index')}" method="post" onsubmit="return clear()">
+    <table class="table table-bordered table-hover">
+      {if condition="$list neq ''"}
+      <tr>
+            <td colspan="2">输出结果：<br/><textarea id="listtextarea" style="width:800px;overflow-y:visible;">{$list}</textarea></td>
+      </tr>
+      {/if}
+      <tbody>
+          <tr>
+            <td width="200">Freeswitch API命令行</td>
+            <td><label for="textarea"></label>
+            <textarea name="command" id="command" cols="45" rows="10" style="width:400px;">{$command}</textarea></td>
+          </tr>
+          <tr>
+            <td>&nbsp;</td>
+            <td><input class="btn btn-danger" type="submit" name="button" id="button" value="提交" /></td>
+          </tr>
+      </tbody>
+    </table>
+    </form>
+  </div>
+</div>
+<script>
+$(function(){
+	$("#listtextarea").hover(function(){
+					$(this).height(this.scrollHeight);
+	});
+	$("#listtextarea").height(this.scrollHeight);
+});
+function clear(){
+	$("#listtextarea").html();
+}
+</script>

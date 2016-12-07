@@ -1,0 +1,314 @@
+<?xml version="1.0"?>
+<cdr core-uuid="d5b689a6-4126-461b-b3be-f233154d582f" switchname="SKY-20151216FSC">
+  <channel_data>
+    <state>CS_REPORTING</state>
+    <direction>inbound</direction>
+    <state_number>11</state_number>
+    <flags>0=1;1=1;3=1;37=1;38=1;40=1;43=1;53=1;74=1;94=1;111=1;112=1;120=1</flags>
+    <caps>1=1;2=1;3=1;4=1;5=1;6=1</caps>
+  </channel_data>
+  <call-stats>
+    <audio>
+      <inbound>
+        <raw_bytes>96320</raw_bytes>
+        <media_bytes>96148</media_bytes>
+        <packet_count>560</packet_count>
+        <media_packet_count>559</media_packet_count>
+        <skip_packet_count>13</skip_packet_count>
+        <jitter_packet_count>0</jitter_packet_count>
+        <dtmf_packet_count>0</dtmf_packet_count>
+        <cng_packet_count>0</cng_packet_count>
+        <flush_packet_count>1</flush_packet_count>
+        <largest_jb_size>0</largest_jb_size>
+        <jitter_min_variance>0.77</jitter_min_variance>
+        <jitter_max_variance>400.00</jitter_max_variance>
+        <jitter_loss_rate>0.00</jitter_loss_rate>
+        <jitter_burst_rate>0.00</jitter_burst_rate>
+        <mean_interval>20.00</mean_interval>
+        <flaw_total>0</flaw_total>
+        <quality_percentage>100.00</quality_percentage>
+        <mos>4.50</mos>
+      </inbound>
+      <outbound>
+        <raw_bytes>78432</raw_bytes>
+        <media_bytes>78432</media_bytes>
+        <packet_count>456</packet_count>
+        <media_packet_count>456</media_packet_count>
+        <skip_packet_count>0</skip_packet_count>
+        <dtmf_packet_count>0</dtmf_packet_count>
+        <cng_packet_count>0</cng_packet_count>
+        <rtcp_packet_count>0</rtcp_packet_count>
+        <rtcp_octet_count>0</rtcp_octet_count>
+      </outbound>
+    </audio>
+  </call-stats>
+  <variables>
+    <direction>inbound</direction>
+    <uuid>a3c04e11-b2eb-4bf5-b868-31cbf1767f47</uuid>
+    <session_id>1</session_id>
+    <sip_from_user>1000</sip_from_user>
+    <sip_from_uri>1000%40192.168.10.64</sip_from_uri>
+    <sip_from_host>192.168.10.64</sip_from_host>
+    <video_media_flow>sendrecv</video_media_flow>
+    <channel_name>sofia/internal/1000%40192.168.10.64</channel_name>
+    <ep_codec_string>CORE_PCM_MODULE.PCMU%408000h%4020i%4064000b,CORE_PCM_MODULE.PCMA%408000h%4020i%4064000b</ep_codec_string>
+    <sip_local_network_addr>192.168.10.64</sip_local_network_addr>
+    <sip_network_ip>192.168.10.64</sip_network_ip>
+    <sip_network_port>25052</sip_network_port>
+    <sip_received_ip>192.168.10.64</sip_received_ip>
+    <sip_received_port>25052</sip_received_port>
+    <sip_via_protocol>udp</sip_via_protocol>
+    <sip_authorized>true</sip_authorized>
+    <Event-Name>REQUEST_PARAMS</Event-Name>
+    <Core-UUID>d5b689a6-4126-461b-b3be-f233154d582f</Core-UUID>
+    <FreeSWITCH-Hostname>SKY-20151216FSC</FreeSWITCH-Hostname>
+    <FreeSWITCH-Switchname>SKY-20151216FSC</FreeSWITCH-Switchname>
+    <FreeSWITCH-IPv4>192.168.10.64</FreeSWITCH-IPv4>
+    <FreeSWITCH-IPv6>fe80%3A%3Affff%3Affff%3Afffe%11</FreeSWITCH-IPv6>
+    <Event-Date-Local>2016-12-06%2014%3A27%3A54</Event-Date-Local>
+    <Event-Date-GMT>Tue,%2006%20Dec%202016%2006%3A27%3A54%20GMT</Event-Date-GMT>
+    <Event-Date-Timestamp>1481005674877328</Event-Date-Timestamp>
+    <Event-Calling-File>sofia.c</Event-Calling-File>
+    <Event-Calling-Function>sofia_handle_sip_i_invite</Event-Calling-Function>
+    <Event-Calling-Line-Number>9452</Event-Calling-Line-Number>
+    <Event-Sequence>536</Event-Sequence>
+    <sip_number_alias>1000</sip_number_alias>
+    <sip_auth_username>1000</sip_auth_username>
+    <sip_auth_realm>192.168.10.64</sip_auth_realm>
+    <number_alias>1000</number_alias>
+    <requested_user_name>1000</requested_user_name>
+    <requested_domain_name>192.168.10.64</requested_domain_name>
+    <record_stereo>true</record_stereo>
+    <default_gateway>example.com</default_gateway>
+    <default_areacode>918</default_areacode>
+    <transfer_fallback_extension>operator</transfer_fallback_extension>
+    <toll_allow>domestic,international,local</toll_allow>
+    <accountcode>1000</accountcode>
+    <user_context>default</user_context>
+    <effective_caller_id_name>Extension%201000</effective_caller_id_name>
+    <effective_caller_id_number>1000</effective_caller_id_number>
+    <outbound_caller_id_name>FreeSWITCH</outbound_caller_id_name>
+    <outbound_caller_id_number>0000000000</outbound_caller_id_number>
+    <callgroup>techsupport</callgroup>
+    <user_name>1000</user_name>
+    <domain_name>192.168.10.64</domain_name>
+    <sip_from_user_stripped>1000</sip_from_user_stripped>
+    <sofia_profile_name>internal</sofia_profile_name>
+    <recovery_profile_name>internal</recovery_profile_name>
+    <sip_req_user>5000</sip_req_user>
+    <sip_req_uri>5000%40192.168.10.64</sip_req_uri>
+    <sip_req_host>192.168.10.64</sip_req_host>
+    <sip_to_user>5000</sip_to_user>
+    <sip_to_uri>5000%40192.168.10.64</sip_to_uri>
+    <sip_to_host>192.168.10.64</sip_to_host>
+    <sip_contact_user>1000</sip_contact_user>
+    <sip_contact_port>25052</sip_contact_port>
+    <sip_contact_uri>1000%40192.168.10.64%3A25052</sip_contact_uri>
+    <sip_contact_host>192.168.10.64</sip_contact_host>
+    <sip_via_host>192.168.10.64</sip_via_host>
+    <sip_via_port>25052</sip_via_port>
+    <sip_via_rport>25052</sip_via_rport>
+    <max_forwards>70</max_forwards>
+    <presence_id>1000%40192.168.10.64</presence_id>
+    <switch_r_sdp>v%3D0%0D%0Ao%3D-%200%202%20IN%20IP4%20192.168.10.64%0D%0As%3DCounterPath%20eyeBeam%201.5%0D%0Ac%3DIN%20IP4%20192.168.10.64%0D%0At%3D0%200%0D%0Am%3Daudio%2012648%20RTP/AVP%200%2098%208%2018%203%20101%0D%0Aa%3Drtpmap%3A98%20iLBC/8000%0D%0Aa%3Drtpmap%3A18%20G729/8000%0D%0Aa%3Dfmtp%3A18%20annexb%3Dyes%0D%0Aa%3Drtpmap%3A101%20telephone-event/8000%0D%0Aa%3Dfmtp%3A101%200-15%0D%0Aa%3Dalt%3A1%201%20%3A%20m0T0Kjov%20Uq3SS4sw%20192.168.10.64%2012648%0D%0A</switch_r_sdp>
+    <DP_MATCH>DELAYED%20NEGOTIATION</DP_MATCH>
+    <DP_MATCH>DELAYED%20NEGOTIATION</DP_MATCH>
+    <call_uuid>a3c04e11-b2eb-4bf5-b868-31cbf1767f47</call_uuid>
+    <open>true</open>
+    <RFC2822_DATE>Tue,%2006%20Dec%202016%2014%3A28%3A04%20%2B0800</RFC2822_DATE>
+    <export_vars>RFC2822_DATE</export_vars>
+    <audio_media_flow>sendrecv</audio_media_flow>
+    <rtp_use_codec_string>OPUS,G722,PCMU,PCMA,VP8</rtp_use_codec_string>
+    <rtp_audio_recv_pt>0</rtp_audio_recv_pt>
+    <rtp_use_codec_name>PCMU</rtp_use_codec_name>
+    <rtp_use_codec_rate>8000</rtp_use_codec_rate>
+    <rtp_use_codec_ptime>20</rtp_use_codec_ptime>
+    <rtp_use_codec_channels>1</rtp_use_codec_channels>
+    <rtp_last_audio_codec_string>PCMU%408000h%4020i%401c</rtp_last_audio_codec_string>
+    <read_codec>PCMU</read_codec>
+    <original_read_codec>PCMU</original_read_codec>
+    <read_rate>8000</read_rate>
+    <original_read_rate>8000</original_read_rate>
+    <write_codec>PCMU</write_codec>
+    <write_rate>8000</write_rate>
+    <dtmf_type>rfc2833</dtmf_type>
+    <local_media_ip>192.168.10.64</local_media_ip>
+    <local_media_port>26954</local_media_port>
+    <advertised_media_ip>192.168.10.64</advertised_media_ip>
+    <rtp_use_timer_name>soft</rtp_use_timer_name>
+    <rtp_use_pt>0</rtp_use_pt>
+    <rtp_use_ssrc>1545378170</rtp_use_ssrc>
+    <rtp_2833_send_payload>101</rtp_2833_send_payload>
+    <rtp_2833_recv_payload>101</rtp_2833_recv_payload>
+    <remote_media_ip>192.168.10.64</remote_media_ip>
+    <remote_media_port>12648</remote_media_port>
+    <rtp_local_sdp_str>v%3D0%0Ao%3DFreeSWITCH%201480978730%201480978731%20IN%20IP4%20192.168.10.64%0As%3DFreeSWITCH%0Ac%3DIN%20IP4%20192.168.10.64%0At%3D0%200%0Am%3Daudio%2026954%20RTP/AVP%200%20101%0Aa%3Drtpmap%3A0%20PCMU/8000%0Aa%3Drtpmap%3A101%20telephone-event/8000%0Aa%3Dfmtp%3A101%200-16%0Aa%3Dptime%3A20%0Aa%3Dsendrecv%0A</rtp_local_sdp_str>
+    <endpoint_disposition>ANSWER</endpoint_disposition>
+    <sip_to_tag>g8B443yUXa9KQ</sip_to_tag>
+    <sip_from_tag>a12d9a38</sip_from_tag>
+    <sip_cseq>2</sip_cseq>
+    <sip_call_id>YjhmNjBkM2EzMmRjY2ZkZjRlM2VkOTFlNGNlNzk2NWU.</sip_call_id>
+    <sip_full_via>SIP/2.0/UDP%20192.168.10.64%3A25052%3Bbranch%3Dz9hG4bK-d8754z-f958125e0b539240-1---d8754z-%3Brport%3D25052</sip_full_via>
+    <sip_from_display>1000</sip_from_display>
+    <sip_full_from>%221000%22%20%3Csip%3A1000%40192.168.10.64%3E%3Btag%3Da12d9a38</sip_full_from>
+    <sip_to_display>5000</sip_to_display>
+    <sip_full_to>%225000%22%20%3Csip%3A5000%40192.168.10.64%3E%3Btag%3Dg8B443yUXa9KQ</sip_full_to>
+    <current_application_data>demo_ivr</current_application_data>
+    <current_application>ivr</current_application>
+    <tts_engine>flite</tts_engine>
+    <tts_voice>rms</tts_voice>
+    <ivr_menu_status>success</ivr_menu_status>
+    <sip_term_status>200</sip_term_status>
+    <proto_specific_hangup_cause>sip%3A200</proto_specific_hangup_cause>
+    <sip_term_cause>16</sip_term_cause>
+    <sip_user_agent>eyeBeam%20release%201102q%20stamp%2051814</sip_user_agent>
+    <sip_hangup_disposition>recv_bye</sip_hangup_disposition>
+    <playback_last_offset_pos>20320</playback_last_offset_pos>
+    <playback_seconds>2</playback_seconds>
+    <playback_ms>2593</playback_ms>
+    <playback_samples>20745</playback_samples>
+    <sound_prefix>C%3A/Program%20Files/FreeSWITCH/sounds/en/us/callie</sound_prefix>
+    <hangup_cause>NORMAL_CLEARING</hangup_cause>
+    <hangup_cause_q850>16</hangup_cause_q850>
+    <digits_dialed>none</digits_dialed>
+    <start_stamp>2016-12-06%2014%3A27%3A54</start_stamp>
+    <profile_start_stamp>2016-12-06%2014%3A27%3A54</profile_start_stamp>
+    <answer_stamp>2016-12-06%2014%3A28%3A04</answer_stamp>
+    <progress_media_stamp>2016-12-06%2014%3A28%3A04</progress_media_stamp>
+    <end_stamp>2016-12-06%2014%3A28%3A16</end_stamp>
+    <start_epoch>1481005674</start_epoch>
+    <start_uepoch>1481005674877328</start_uepoch>
+    <profile_start_epoch>1481005674</profile_start_epoch>
+    <profile_start_uepoch>1481005674877328</profile_start_uepoch>
+    <answer_epoch>1481005684</answer_epoch>
+    <answer_uepoch>1481005684916902</answer_uepoch>
+    <bridge_epoch>0</bridge_epoch>
+    <bridge_uepoch>0</bridge_uepoch>
+    <last_hold_epoch>0</last_hold_epoch>
+    <last_hold_uepoch>0</last_hold_uepoch>
+    <hold_accum_seconds>0</hold_accum_seconds>
+    <hold_accum_usec>0</hold_accum_usec>
+    <hold_accum_ms>0</hold_accum_ms>
+    <resurrect_epoch>0</resurrect_epoch>
+    <resurrect_uepoch>0</resurrect_uepoch>
+    <progress_epoch>0</progress_epoch>
+    <progress_uepoch>0</progress_uepoch>
+    <progress_media_epoch>1481005684</progress_media_epoch>
+    <progress_media_uepoch>1481005684916902</progress_media_uepoch>
+    <end_epoch>1481005696</end_epoch>
+    <end_uepoch>1481005696257551</end_uepoch>
+    <last_app>ivr</last_app>
+    <last_arg>demo_ivr</last_arg>
+    <caller_id>%221000%22%20%3C1000%3E</caller_id>
+    <duration>22</duration>
+    <billsec>12</billsec>
+    <progresssec>0</progresssec>
+    <answersec>10</answersec>
+    <waitsec>0</waitsec>
+    <progress_mediasec>10</progress_mediasec>
+    <flow_billsec>22</flow_billsec>
+    <mduration>21380</mduration>
+    <billmsec>11341</billmsec>
+    <progressmsec>0</progressmsec>
+    <answermsec>10039</answermsec>
+    <waitmsec>0</waitmsec>
+    <progress_mediamsec>10039</progress_mediamsec>
+    <flow_billmsec>21380</flow_billmsec>
+    <uduration>21380223</uduration>
+    <billusec>11340649</billusec>
+    <progressusec>0</progressusec>
+    <answerusec>10039574</answerusec>
+    <waitusec>0</waitusec>
+    <progress_mediausec>10039574</progress_mediausec>
+    <flow_billusec>21380223</flow_billusec>
+    <rtp_audio_in_raw_bytes>96320</rtp_audio_in_raw_bytes>
+    <rtp_audio_in_media_bytes>96148</rtp_audio_in_media_bytes>
+    <rtp_audio_in_packet_count>560</rtp_audio_in_packet_count>
+    <rtp_audio_in_media_packet_count>559</rtp_audio_in_media_packet_count>
+    <rtp_audio_in_skip_packet_count>13</rtp_audio_in_skip_packet_count>
+    <rtp_audio_in_jitter_packet_count>0</rtp_audio_in_jitter_packet_count>
+    <rtp_audio_in_dtmf_packet_count>0</rtp_audio_in_dtmf_packet_count>
+    <rtp_audio_in_cng_packet_count>0</rtp_audio_in_cng_packet_count>
+    <rtp_audio_in_flush_packet_count>1</rtp_audio_in_flush_packet_count>
+    <rtp_audio_in_largest_jb_size>0</rtp_audio_in_largest_jb_size>
+    <rtp_audio_in_jitter_min_variance>0.77</rtp_audio_in_jitter_min_variance>
+    <rtp_audio_in_jitter_max_variance>400.00</rtp_audio_in_jitter_max_variance>
+    <rtp_audio_in_jitter_loss_rate>0.00</rtp_audio_in_jitter_loss_rate>
+    <rtp_audio_in_jitter_burst_rate>0.00</rtp_audio_in_jitter_burst_rate>
+    <rtp_audio_in_mean_interval>20.00</rtp_audio_in_mean_interval>
+    <rtp_audio_in_flaw_total>0</rtp_audio_in_flaw_total>
+    <rtp_audio_in_quality_percentage>100.00</rtp_audio_in_quality_percentage>
+    <rtp_audio_in_mos>4.50</rtp_audio_in_mos>
+    <rtp_audio_out_raw_bytes>78432</rtp_audio_out_raw_bytes>
+    <rtp_audio_out_media_bytes>78432</rtp_audio_out_media_bytes>
+    <rtp_audio_out_packet_count>456</rtp_audio_out_packet_count>
+    <rtp_audio_out_media_packet_count>456</rtp_audio_out_media_packet_count>
+    <rtp_audio_out_skip_packet_count>0</rtp_audio_out_skip_packet_count>
+    <rtp_audio_out_dtmf_packet_count>0</rtp_audio_out_dtmf_packet_count>
+    <rtp_audio_out_cng_packet_count>0</rtp_audio_out_cng_packet_count>
+    <rtp_audio_rtcp_packet_count>0</rtp_audio_rtcp_packet_count>
+    <rtp_audio_rtcp_octet_count>0</rtp_audio_rtcp_octet_count>
+  </variables>
+  <app_log>
+    <application app_name="set" app_data="open=true" app_stamp="1481005674900329"></application>
+    <application app_name="log" app_data="CRIT WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING " app_stamp="1481005674900329"></application>
+    <application app_name="log" app_data="CRIT Open C:/Program Files/FreeSWITCH/conf/vars.xml and change the default_password." app_stamp="1481005674901329"></application>
+    <application app_name="log" app_data="CRIT Once changed type 'reloadxml' at the console." app_stamp="1481005674901329"></application>
+    <application app_name="log" app_data="CRIT WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING " app_stamp="1481005674901329"></application>
+    <application app_name="sleep" app_data="10000" app_stamp="1481005674902329"></application>
+    <application app_name="hash" app_data="insert/192.168.10.64-spymap/1000/a3c04e11-b2eb-4bf5-b868-31cbf1767f47" app_stamp="1481005684908902"></application>
+    <application app_name="hash" app_data="insert/192.168.10.64-last_dial/1000/5000" app_stamp="1481005684909902"></application>
+    <application app_name="hash" app_data="insert/192.168.10.64-last_dial/global/a3c04e11-b2eb-4bf5-b868-31cbf1767f47" app_stamp="1481005684909902"></application>
+    <application app_name="export" app_data="RFC2822_DATE=Tue, 06 Dec 2016 14:28:04 +0800" app_stamp="1481005684910902"></application>
+    <application app_name="answer" app_data="" app_stamp="1481005684910902"></application>
+    <application app_name="sleep" app_data="2000" app_stamp="1481005684921902"></application>
+    <application app_name="ivr" app_data="demo_ivr" app_stamp="1481005686917016"></application>
+  </app_log>
+  <callflow dialplan="XML" unique-id="75ce3813-0651-45b6-b62d-adf0dfca8a40" profile_index="1">
+    <extension name="tod_example" number="5000">
+      <application app_name="set" app_data="open=true"></application>
+      <application app_name="log" app_data="CRIT WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING "></application>
+      <application app_name="log" app_data="CRIT Open C:/Program Files/FreeSWITCH/conf/vars.xml and change the default_password."></application>
+      <application app_name="log" app_data="CRIT Once changed type 'reloadxml' at the console."></application>
+      <application app_name="log" app_data="CRIT WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING "></application>
+      <application app_name="sleep" app_data="10000"></application>
+      <application app_name="hash" app_data="insert/${domain_name}-spymap/${caller_id_number}/${uuid}"></application>
+      <application app_name="hash" app_data="insert/${domain_name}-last_dial/${caller_id_number}/${destination_number}"></application>
+      <application app_name="hash" app_data="insert/${domain_name}-last_dial/global/${uuid}"></application>
+      <application app_name="export" app_data="RFC2822_DATE=${strftime(%a, %d %b %Y %T %z)}"></application>
+      <application app_name="answer" app_data=""></application>
+      <application app_name="sleep" app_data="2000"></application>
+      <application app_name="ivr" app_data="demo_ivr"></application>
+    </extension>
+    <caller_profile>
+      <username>1000</username>
+      <dialplan>XML</dialplan>
+      <caller_id_name>1000</caller_id_name>
+      <caller_id_number>1000</caller_id_number>
+      <callee_id_name></callee_id_name>
+      <callee_id_number></callee_id_number>
+      <ani>1000</ani>
+      <aniii></aniii>
+      <network_addr>192.168.10.64</network_addr>
+      <rdnis></rdnis>
+      <destination_number>5000</destination_number>
+      <uuid>a3c04e11-b2eb-4bf5-b868-31cbf1767f47</uuid>
+      <source>mod_sofia</source>
+      <context>default</context>
+      <chan_name>sofia/internal/1000@192.168.10.64</chan_name>
+    </caller_profile>
+    <times>
+      <created_time>1481005674877328</created_time>
+      <profile_created_time>1481005674877328</profile_created_time>
+      <progress_time>0</progress_time>
+      <progress_media_time>1481005684916902</progress_media_time>
+      <answered_time>1481005684916902</answered_time>
+      <bridged_time>0</bridged_time>
+      <last_hold_time>0</last_hold_time>
+      <hold_accum_time>0</hold_accum_time>
+      <hangup_time>1481005696257551</hangup_time>
+      <resurrect_time>0</resurrect_time>
+      <transfer_time>0</transfer_time>
+    </times>
+  </callflow>
+</cdr>

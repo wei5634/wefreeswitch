@@ -1,0 +1,34 @@
+<div class="container">
+<div class="row">
+  {include file="config/menu"/}
+  <div>
+    <form role="form" name="forminput" method="post">
+    <table class="table table-bordered table-hover">
+      <thead>
+      <tr >
+        <td colspan="3" align="left"  bgcolor="#E7E7E7" height="24">&nbsp;&nbsp;<strong>{$type}</strong></td>
+      </tr>
+        <tr>
+          <th>名称</th>
+          <th>值</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td style="width: 150px;">{$key}</td>
+            <td><textarea name="data[{$key}]" class="form-control" rows="3">{$val}</textarea></td>
+            <td></td>
+          </tr>
+        {/foreach}
+        <tr>
+          <td style="width: 150px;"></td>
+          <td><button type="submit" class="btn btn-danger">提 交</button> </td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+    </form>
+  </div>
+</div>

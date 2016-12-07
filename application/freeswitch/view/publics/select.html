@@ -1,0 +1,23 @@
+<div class="container">
+<div class="row">
+  <div>
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>IP</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['server_name']}</td>
+            <td>{$val['esl_host']}</td>
+            <td><a href="{:url('selected',array('key'=>$key))}">选择</a></td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+  </div>
+</div>

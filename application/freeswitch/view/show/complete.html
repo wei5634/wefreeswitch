@@ -1,0 +1,47 @@
+<div class="container">
+<div class="row">
+  <div>
+    <ul class="breadcrumb">
+      <li> <a href="{:url('index/index')}">首页</a>  </li>
+      <li> {$Think.session.freeswitch_esl_name}  </li>
+      <li class="active">complete</li>
+      </ul>
+    {include file="show/menu" /}
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>sticky</th>
+          <th>a1</th>
+          <th>a2</th>
+          <th>a3</th>
+          <th>a4</th>
+          <th>a5</th>
+          <th>a6</th>
+          <th>a7</th>
+          <th>a8</th>
+          <th>a9</th>
+          <th>a10</th>
+          <th>hostname</th>
+        </tr>
+      </thead>
+      <tbody>
+        {foreach name="list" item="val"}
+          <tr>
+            <td>{$val['sticky']}</td>
+            <td>{$val['a1']}</td>
+            <td>{$val['a2']}</td>
+            <td>{$val['a3']}</td>
+            <td>{$val['a4']}</td>
+            <td>{$val['a5']}</td>
+            <td>{$val['a6']}</td>
+            <td>{$val['a7']}</td>
+            <td>{$val['a8']}</td>
+            <td>{$val['a9']}</td>
+            <td>{$val['a10']}</td>
+            <td>{$val['hostname']}</td>
+          </tr>
+        {/foreach}
+      </tbody>
+    </table>
+  </div>
+</div>
