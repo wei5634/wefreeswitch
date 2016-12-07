@@ -23,8 +23,7 @@ mysql 5+
 后端:thinkphp5
 前端:bootstrap3.3.7,jquery
 
-### 安装
----------------------
+## 安装
 安装freeswitch
 修改conf/autoload_configs/event_socket.conf.xml
 listen-ip
@@ -32,10 +31,8 @@ listen-port
 password
 此次本地测试，所以不用修改
 打开freeswitch
----------------------
 
 本程序文件，添加以下信息到application/extra/freeswitch_esl.php
--------------------------------------------------------
 <?php
 return array (
   0 => 
@@ -54,11 +51,10 @@ return array (
     'esl_password' => 'ClueCon',
     'sid' => '2',
   ),
-); 
--------------------------------------------------------
+);
 可以浏览网站了
 
-### CDR历史记录
+## CDR历史记录
 
 freeswitch修改
 conf/autoload_configs/xml_cdr.conf.xml
@@ -68,7 +64,7 @@ conf/autoload_configs/xml_cdr.conf.xml
 
 fs_xml_cdr为cdr存储表，请自行建立mysql表
 
-### 杂项
+## 杂项
 composer都是thinkphp的，可以忽略
 
 ## author
