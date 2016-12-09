@@ -33,6 +33,7 @@ password
 打开freeswitch
 
 本程序文件，添加以下信息到application/extra/freeswitch_esl.php
+```php
 <?php
 return array (
   0 => 
@@ -52,6 +53,7 @@ return array (
     'sid' => '2',
   ),
 );
+```
 可以浏览网站了
 
 ## CDR历史记录
